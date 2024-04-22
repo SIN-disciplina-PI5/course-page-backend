@@ -1,6 +1,0 @@
-@UNICAP.SiteCurso.WebApi_HostAddress = http://localhost:5167
-
-GET {{UNICAP.SiteCurso.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
