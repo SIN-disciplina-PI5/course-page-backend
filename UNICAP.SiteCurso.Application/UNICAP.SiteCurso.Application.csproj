@@ -32,4 +32,9 @@
     <ProjectReference Include="..\UNICAP.SiteCurso.Domain\UNICAP.SiteCurso.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CQRS\" />
+    <Folder Include="AutoMapper\" />
+  </ItemGroup>
+
 </Project>
