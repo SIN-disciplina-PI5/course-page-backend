@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using UNICAP.SiteCurso.Infrastructure.Enum;
+using UNICAP.SiteCurso.Domain.Enum;
 
-namespace UNICAP.SiteCurso.Infrastructure.Entities
+namespace UNICAP.SiteCurso.Domain.Entities
 {
     [Table("TB_USER_CREDENTIALS")]
     public class UserCredentials : BaseEntity<int>

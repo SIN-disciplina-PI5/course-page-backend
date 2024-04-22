@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace UNICAP.SiteCurso.Infrastructure.Enum
+namespace UNICAP.SiteCurso.Domain.Enum
 {
     public enum Role
     {

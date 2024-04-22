@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace UNICAP.SiteCurso.Infrastructure.Entities
+namespace UNICAP.SiteCurso.Domain.Entities
 {
     [Table("TB_USER")]
     public class User : BaseEntity<int>
