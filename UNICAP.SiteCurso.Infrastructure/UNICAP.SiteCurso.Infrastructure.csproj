@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\UNICAP.SiteCurso.Application\UNICAP.SiteCurso.Application.csproj" />
     <ProjectReference Include="..\UNICAP.SiteCurso.Domain\UNICAP.SiteCurso.Domain.csproj" />
   </ItemGroup>
