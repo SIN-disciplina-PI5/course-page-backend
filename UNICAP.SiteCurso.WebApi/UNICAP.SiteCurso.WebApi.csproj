@@ -26,8 +26,4 @@
     <ProjectReference Include="..\UNICAP.SiteCurso.Infrastructure\UNICAP.SiteCurso.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
