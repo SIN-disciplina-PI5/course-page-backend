@@ -1,10 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage;
+using UNICAP.SiteCurso.Domain.Entities;
 
 namespace UNICAP.SiteCurso.Application.Interfaces
 {
     public interface IEFContext
     {
+        DbSet<User> Users { get; set; }
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         int SaveChanges();
         EntityEntry Update(object obj);

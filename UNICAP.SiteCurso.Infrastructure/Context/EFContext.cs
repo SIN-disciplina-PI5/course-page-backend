@@ -4,11 +4,15 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System.Threading;
 using System.Threading.Tasks;
 using UNICAP.SiteCurso.Application.Interfaces;
+using UNICAP.SiteCurso.Domain.Entities;
 
 namespace UNICAP.SiteCurso.Infrastructure.Context
 {
     public class EFContext : DbContext, IEFContext
     {
+        public EFContext(DbContextOptions<EFContext> options) : base(options) { }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserCredentials> UserCredentials { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
