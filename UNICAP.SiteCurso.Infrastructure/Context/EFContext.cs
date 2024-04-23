@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage;
+using System.Threading;
+using System.Threading.Tasks;
 using UNICAP.SiteCurso.Application.Interfaces;
 
 namespace UNICAP.SiteCurso.Infrastructure.Context
