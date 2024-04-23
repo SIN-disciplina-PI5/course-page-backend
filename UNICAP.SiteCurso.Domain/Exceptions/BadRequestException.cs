@@ -1,4 +1,6 @@
-﻿namespace UNICAP.SiteCurso.Domain.Exceptions
+﻿using System;
+
+namespace UNICAP.SiteCurso.Domain.Exceptions
 {
     public class BadRequestException : Exception
     {
