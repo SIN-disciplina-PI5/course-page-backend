@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
+using System.Linq;
 using UNICAP.SiteCurso.Application.DTOs.EnumFolder;
 
 namespace UNICAP.SiteCurso.Application.Extensions

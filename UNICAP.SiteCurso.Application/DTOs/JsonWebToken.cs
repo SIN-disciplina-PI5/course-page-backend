@@ -1,4 +1,6 @@
-﻿namespace UNICAP.SiteCurso.Application.DTOs
+﻿using System;
+
+namespace UNICAP.SiteCurso.Application.DTOs
 {
     public class JsonWebToken
     {

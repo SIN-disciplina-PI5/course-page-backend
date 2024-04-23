@@ -1,4 +1,8 @@
-﻿using UNICAP.SiteCurso.Application.DTOs.GenericsFolder;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using UNICAP.SiteCurso.Application.DTOs.GenericsFolder;
 using UNICAP.SiteCurso.Application.Interfaces;
 
 namespace UNICAP.SiteCurso.Application.Exceptions

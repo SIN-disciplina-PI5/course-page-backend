@@ -1,7 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
 using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using UNICAP.SiteCurso.Application.DTOs.GenericsFolder;
 using UNICAP.SiteCurso.Application.Exceptions;
 using UNICAP.SiteCurso.Application.Interfaces;

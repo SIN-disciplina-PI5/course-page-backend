@@ -1,7 +1,11 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using UNICAP.SiteCurso.Application.DTOs.GenericsFolder;
 
 namespace UNICAP.SiteCurso.Application.Pipelines

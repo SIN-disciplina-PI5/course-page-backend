@@ -1,4 +1,6 @@
-﻿namespace UNICAP.SiteCurso.Application.DTOs.BaseFolder
+﻿using System;
+
+namespace UNICAP.SiteCurso.Application.DTOs.BaseFolder
 {
     public class BaseDTO
     {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 using UNICAP.SiteCurso.Domain.Constants;
 
 namespace UNICAP.SiteCurso.Application.Extensions
