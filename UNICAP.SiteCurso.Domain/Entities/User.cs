@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UNICAP.SiteCurso.Domain.Entities
@@ -23,5 +24,7 @@ namespace UNICAP.SiteCurso.Domain.Entities
         [ForeignKey("Credentials")]
         public int CredentialsId { get; set; }
         public virtual UserCredentials Credentials { get; set; }
+
+        public virtual ICollection<Article> Artigos { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace UNICAP.SiteCurso.Application.Interfaces
     public interface IEFContext
     {
         DbSet<User> Users { get; set; }
+        DbSet<Article> Articles { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         int SaveChanges();

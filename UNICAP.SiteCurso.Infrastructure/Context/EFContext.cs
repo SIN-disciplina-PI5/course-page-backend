@@ -13,9 +13,18 @@ namespace UNICAP.SiteCurso.Infrastructure.Context
         public EFContext(DbContextOptions<EFContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
         public DbSet<UserCredentials> UserCredentials { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(EFContext).Assembly);
+
+            modelBuilder.Entity<Article>()
+                .HasOne(x => x.Usuario)
+                .WithMany(x => x.Artigos)
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
