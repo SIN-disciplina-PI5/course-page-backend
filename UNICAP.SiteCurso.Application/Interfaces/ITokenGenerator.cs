@@ -1,5 +1,5 @@
-﻿using Microsoft.IdentityModel.JsonWebTokens;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using UNICAP.SiteCurso.Application.DTOs;
 using UNICAP.SiteCurso.Domain.Entities;
 
 namespace UNICAP.SiteCurso.Application.Interfaces
