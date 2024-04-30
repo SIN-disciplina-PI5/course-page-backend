@@ -32,8 +32,4 @@
     <ProjectReference Include="..\UNICAP.SiteCurso.Domain\UNICAP.SiteCurso.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AutoMapper\UserFolder\" />
-  </ItemGroup>
-
 </Project>
