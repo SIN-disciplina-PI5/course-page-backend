@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMapper\" />
+    <Folder Include="AutoMapper\UserFolder\" />
   </ItemGroup>
 
 </Project>
