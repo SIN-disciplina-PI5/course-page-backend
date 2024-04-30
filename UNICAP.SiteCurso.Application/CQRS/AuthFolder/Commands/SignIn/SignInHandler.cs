@@ -17,7 +17,7 @@ namespace UNICAP.SiteCurso.Application.CQRS.AuthFolder.Commands.SignIn
         private readonly ITokenGenerator tokenGenerator;
         private readonly IEFContext eFContext;
         private Response response;
-
+        
         public SignInHandler(ITokenGenerator tokenGenerator, IEFContext eFContext, Response response)
         {
             this.tokenGenerator = tokenGenerator;
