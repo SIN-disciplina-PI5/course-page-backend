@@ -32,4 +32,8 @@
     <ProjectReference Include="..\UNICAP.SiteCurso.Domain\UNICAP.SiteCurso.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CQRS\ArticleFolder\Queries\" />
+  </ItemGroup>
+
 </Project>
