@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UNICAP.SiteCurso.Application.DTOs.GenericsFolder;
+using UNICAP.SiteCurso.Application.Interfaces;
+using UNICAP.SiteCurso.Application.Jwt;
 using UNICAP.SiteCurso.Application.Pipelines;
 
 namespace UNICAP.SiteCurso.Application.IoC
@@ -32,7 +34,7 @@ namespace UNICAP.SiteCurso.Application.IoC
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionBehavior<,>));
             services.AddValidatorsFromAssembly(typeof(ApplicationExtensions).Assembly);
             services.AddTransient<Response>();
-            //services.AddTransient<ITokenGenerator, JwtGenerator>();
+            services.AddTransient<ITokenGenerator, JwtGenerator>();
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ApplicationExtensions).Assembly));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionBehavior<,>));

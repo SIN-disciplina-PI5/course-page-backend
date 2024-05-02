@@ -30,7 +30,7 @@ namespace UNICAP.SiteCurso.Application.CQRS.UserFolder.Commands.Create
         public async Task<Response> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
             var senhaPadrao = GerarSenhaAleatoria();
-            var loginPadrao = GerarLogin(request);
+            var loginPadrao = request.Email;
 
             var user = mapper.Map<User>(request);
             user.Credentials.Password = senhaPadrao;
@@ -52,30 +52,6 @@ namespace UNICAP.SiteCurso.Application.CQRS.UserFolder.Commands.Create
             var senhaPadrao = "Unicap" + DateTime.Today.ToString("ddMMyyyy");
 
             return senhaPadrao;
-        }
-
-        private static string GerarLogin(CreateUserCommand request)
-        {
-            var nome = request.Nome.ToLower();
-            nome = RemoverAcentos(nome);
-            var partesNome = nome.Split(' ');
-            var primeiroNome = partesNome[0];
-            var ultimoNome = partesNome[partesNome.Length - 1];
-
-            return $"{primeiroNome}.{ultimoNome}";
-
-        }
-
-        public static string RemoverAcentos(string texto)
-        {
-            string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇç";
-            string semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc";
-
-            for (int i = 0; i < comAcentos.Length; i++)
-            {
-                texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
-            }
-            return texto;
         }
 
         private async Task SaveUserAsync(User user, CreateUserCommand request)

@@ -35,7 +35,7 @@ namespace UNICAP.SiteCurso.WebApi.Controllers
         [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Response), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Response), StatusCodes.Status500InternalServerError)]
-        public Task<Response> LoginNovo([FromBody] SignInCommand request)
+        public Task<Response> Login([FromBody] SignInCommand request)
         {
             return _mediator.Send(request);
         }
