@@ -67,7 +67,7 @@
         #region Database
 
         public const string PersistenceDbExceptionMessage = "Não foi possível persistir as informações solicitadas.";
-
+        public const string DeleteRegisterSuccess = "Registro inativado com sucesso";
         public const string SuccessDataTransferObject = "Dados transferidos com sucesso";
         public const string NotFoundExceptionMessage = "Informação não encontrada.";
 
