@@ -33,7 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CQRS\ArticleFolder\Commands\Update\" />
     <Folder Include="CQRS\ArticleFolder\Queries\GetById\" />
   </ItemGroup>
 
