@@ -30,7 +30,7 @@ namespace UNICAP.SiteCurso.WebApi.Controllers
         /// <response code="401">Credenciais de autenticação inválidas.</response>
         /// <response code="500">Ocorreu um erro interno do servidor.</response>
         [HttpPost]
-        [Route("LoginNovo")]
+        [Route("Login")]
         [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Response), StatusCodes.Status401Unauthorized)]

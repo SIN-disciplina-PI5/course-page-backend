@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Net;
 using System.Threading;
@@ -29,8 +30,15 @@ namespace UNICAP.SiteCurso.Application.CQRS.UserFolder.Commands.Create
 
         public async Task<Response> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+
+            var emailExiste = await eFContext.Users.FirstOrDefaultAsync(x => x.Email.Equals(request.Email.ToLower().Trim()));
+            if(emailExiste is not null)
+            {
+                throw new Exception("Email já cadastrado no sistema!");
+            }
+
             var senhaPadrao = GerarSenhaAleatoria();
-            var loginPadrao = request.Email;
+            var loginPadrao = request.Email.ToLower().Trim();
 
             var user = mapper.Map<User>(request);
             user.Credentials.Password = senhaPadrao;
@@ -49,7 +57,7 @@ namespace UNICAP.SiteCurso.Application.CQRS.UserFolder.Commands.Create
 
         private static string GerarSenhaAleatoria()
         {
-            var senhaPadrao = "Unicap" + DateTime.Today.ToString("ddMMyyyy");
+            var senhaPadrao = "Unicap@" + DateTime.Now.Year;
 
             return senhaPadrao;
         }
