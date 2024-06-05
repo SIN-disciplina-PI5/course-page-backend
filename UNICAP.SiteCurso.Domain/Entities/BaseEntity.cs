@@ -12,7 +12,7 @@ namespace UNICAP.SiteCurso.Domain.Entities
 
         [Column("UPDATED_AT")]
         [Required]
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now.ToUniversalTime();
 
         [Column("CREATED_AT")]
         [Required]

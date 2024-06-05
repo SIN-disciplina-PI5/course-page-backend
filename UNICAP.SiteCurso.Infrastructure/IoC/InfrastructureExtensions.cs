@@ -12,7 +12,8 @@ namespace UNICAP.SiteCurso.Infrastructure.IoC
         {
             services.AddDbContext<EFContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("SqlConnection"));
+                options.UseNpgsql(configuration.GetConnectionString("SqlConnection"));
+                //options.UseSqlServer(configuration.GetConnectionString("SqlConnection"));
                 options.UseLazyLoadingProxies();
             });
 
