@@ -4,14 +4,13 @@ using UNICAP.SiteCurso.Application.DTOs.GenericsFolder;
 
 namespace UNICAP.SiteCurso.Application.CQRS.UserFolder.Queries.GetAll
 {
-    public class GetAllUserQuery : PaginatorQueryBase, IRequest<Response>
+    public class GetAllUserQuery :  IRequest<Response>
     {
-        public GetAllUserQuery(bool withDisabled, bool withPagination, int currentPage, int itensPerPage)
+        public GetAllUserQuery(bool withDisabled)
         {
-            WithDisabled = withDisabled;
-            WithPagination = withPagination;
-            CurrentPage = currentPage;
-            ItensPerPage = itensPerPage;
+            this.withDisabled = withDisabled;
         }
+
+        public bool withDisabled { get; set; }
     }
 }

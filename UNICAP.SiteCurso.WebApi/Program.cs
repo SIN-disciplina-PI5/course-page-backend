@@ -54,6 +54,9 @@ app.Run();
 #region Cors
 void ConfigureCors(WebApplicationBuilder builder)
 {
+    //builder.Services.AddCors(config => {
+    //    config.AddPolicy("AllowedWebHosts", opt => opt.WithOrigins(builder.Configuration.GetSection("AllowedWebHosts").Get<string[]>()).AllowAnyMethod().AllowAnyHeader());
+    //});
     builder.Services.AddCors(config => {
         config.AddPolicy("AllowedWebHosts", opt => opt.WithOrigins(builder.Configuration.GetSection("AllowedWebHosts").Get<string[]>()).AllowAnyMethod().AllowAnyHeader());
     });
