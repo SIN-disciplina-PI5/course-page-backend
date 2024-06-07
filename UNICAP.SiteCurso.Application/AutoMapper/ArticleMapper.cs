@@ -13,7 +13,8 @@ namespace UNICAP.SiteCurso.Application.AutoMapper
             CreateMap<Article, ArticleDTO>()
                 .ForMember(dest => dest.Titulo, opt => opt.MapFrom(src => src.Titulo))
                 .ForMember(dest => dest.Descricao, opt => opt.MapFrom(src => src.Descricao))
-                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId));
+                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Usuario.Nome));
 
             CreateMap<CreateArticleCommand, Article>()
                 .ForMember(dest => dest.Titulo, opt => opt.MapFrom(src => src.Titulo))
